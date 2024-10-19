@@ -2,7 +2,7 @@
 Overview
 This is a real-time weather monitoring system that retrieves and processes weather data from the OpenWeatherMap API. The system gathers weather data from major metros in India and provides daily summaries, including temperature averages, minimums, maximums, and the dominant weather condition. Alerts are triggered if specific thresholds, such as temperature exceeding a defined limit, are breached. The system operates continuously, fetching and storing weather data every 5 minutes, and truncates old data after calculating daily summaries every 24 hours.
 
-# path for code: main/java/sourceCode
+# path for code: src/main/java/sourceCode
 # path for unit tests: main/java/tests
 
 # Key Features
