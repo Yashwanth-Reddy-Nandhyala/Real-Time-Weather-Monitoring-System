@@ -2,18 +2,20 @@
 Overview
 This is a real-time weather monitoring system that retrieves and processes weather data from the OpenWeatherMap API. The system gathers weather data from major metros in India and provides daily summaries, including temperature averages, minimums, maximums, and the dominant weather condition. Alerts are triggered if specific thresholds, such as temperature exceeding a defined limit, are breached. The system operates continuously, fetching and storing weather data every 5 minutes, and truncates old data after calculating daily summaries every 24 hours.
 
-Key Features
+# Key Features
 Fetch real-time weather data from OpenWeatherMap API every 5 minutes.
 Aggregate daily weather data, including temperature averages, min/max values, and dominant weather conditions.
 Configurable alerting mechanism based on temperature thresholds.
 Automatic daily data truncation and summary generation.
 Stores weather data and daily summaries in an Oracle database.
-System Requirements
+
+
+# System Requirements
 Java Development Kit (JDK) 11+: Ensure that you have at least JDK 11 installed.
 Oracle Database 11g or later: Used to store weather data and daily summaries.
 Maven: For managing dependencies and building the project.
 OpenWeatherMap API key: Required for fetching real-time weather data. You can sign up for a free API key here.
-Build Instructions
+# Build Instructions
 Clone the repository:
 
 bash
@@ -53,7 +55,7 @@ Add your OpenWeatherMap API key:
 In the WeatherDataFetcher class, add your API key:
 java
 Copy code
-private static final String API_KEY = "your_openweathermap_api_key";
+private static final String API_KEY = "";
 Run the application:
 
 You can run the application directly using:
@@ -70,7 +72,7 @@ Run the container:
 bash
 Copy code
 docker run -d weather-monitoring
-Design Choices
+# Design Choices
 Java and JDBC: Used for the core logic and database connectivity to Oracle.
 Timer-based scheduling: The application continuously fetches weather data at fixed intervals using java.util.Timer.
 Daily Aggregation: The system calculates daily weather summaries using SQL aggregate functions.
@@ -80,7 +82,7 @@ Dependencies
 Oracle JDBC Driver: You need to include Oracle JDBC drivers to connect to the Oracle database.
 Gson: For parsing JSON responses from the OpenWeatherMap API.
 JUnit 5: Used for testing.
-Test Instructions
+# Test Instructions
 To run the unit tests, execute:
 
 bash
