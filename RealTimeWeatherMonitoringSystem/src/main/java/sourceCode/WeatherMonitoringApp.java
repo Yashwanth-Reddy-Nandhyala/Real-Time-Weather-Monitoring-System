@@ -31,7 +31,7 @@ public class WeatherMonitoringApp {
                     }
                 }
             }
-        }, 0, 60 * 1000); // Every 1 minute
+        }, 0, 5 * 60 * 1000); // Every 5 minutes
         
         // Timer for calculating daily summary every 24 hours
         Timer summaryTimer = new Timer();
